@@ -1,23 +1,44 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Link from 'react-router-dom';
 import {Row, Col, ListGroup, Image, Card, Button} from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 
 import Rating from "../components/Rating";
-import products from "../products";
+// import products from "../products";
 import {LinkContainer} from "react-router-bootstrap";
 import Container from "react-bootstrap/Container";
 import Dropdown from "react-bootstrap/Dropdown";
+import {useDispatch, useSelector} from 'react-redux'
+import {listProductDetails} from "../actions/productActions";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 
 const ProductScreen = ({match}) =>{
-    const product = products.find((p) => p._id === match.params.id);
+    // const [product,setProduct] = useState({});
+    const dispatch = useDispatch();
+    const productDetails = useSelector((state) => state.productDetails);
+    const {loading, error, product} =  productDetails
+    useEffect(()=> {
+        dispatch(listProductDetails(match.params.id))
+
+        // const fetchProduct = async () => {
+        //     const {data} = await axios.get(`/products/${match.params.id}`)
+        //
+        //     setProduct(data);
+        // };
+        // fetchProduct()
+    },[dispatch,match])
+
+    // const product = products.find((p) => p._id === match.params.id);
 
     return(
         <>
             <LinkContainer to="/">
                 <Button variant="light">Go Back</Button>
             </LinkContainer>
+            { loading ?(<Loader/>) : error ? (<Message>{error}</Message>) :
+                (
             <Row>
                 <Col md={6}>
                     <Image src={product.image} alt={product.name} fluid/>
@@ -25,7 +46,7 @@ const ProductScreen = ({match}) =>{
                 <Col md={3}>
                     <ListGroup variant="flush">
                         <ListGroup.Item><h3>{product.name}</h3></ListGroup.Item>
-                        <ListGroup.Item><Rating value={product.rating} text={`${product.numReviews} reviews`}></Rating></ListGroup.Item>
+                        <ListGroup.Item><Rating value={product.rating} text={`${product.numReviews} reviews`}/></ListGroup.Item>
                         <ListGroup.Item><strong>Price: ${product.price}</strong></ListGroup.Item>
                         <ListGroup.Item>Description: {product.description}</ListGroup.Item>
                     </ListGroup>
@@ -49,18 +70,18 @@ const ProductScreen = ({match}) =>{
                                 <Row>
                                     <Col>Qty</Col>
                                     <Col>
-                                    <Dropdown>
-                                        <Dropdown.Toggle variant="light" id="dropdown-basic">
-                                            {product.countInStock > 0 ? 1: 0}
-                                        </Dropdown.Toggle>
+                                        <Dropdown>
+                                            <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                                {product.countInStock > 0 ? 1: 0}
+                                            </Dropdown.Toggle>
 
-                                        <Dropdown.Menu>
-                                            {
-                                                [...Array(product.countInStock)].map((_, i) => i + 1)
-                                                    .map(i => <Dropdown.Item>{i}</Dropdown.Item>)
-                                            }
-                                        </Dropdown.Menu>
-                                    </Dropdown>
+                                            <Dropdown.Menu>
+                                                {
+                                                    [...Array(product.countInStock)].map((_, i) => i + 1)
+                                                        .map(i => <Dropdown.Item>{i}</Dropdown.Item>)
+                                                }
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Col>
                                 </Row>
                             </ListGroup.Item>
@@ -73,8 +94,8 @@ const ProductScreen = ({match}) =>{
                         </ListGroup>
                     </Card>
                 </Col>
-            </Row>
-            <Row></Row>
+            </Row>)}
+
 
             {/*<h3>{product.name}</h3>*/}
 
