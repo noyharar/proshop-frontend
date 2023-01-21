@@ -13,7 +13,7 @@ const Product = ({product}) =>{
                 <Link to={`/product/${product._id}`}>
                     <Card.Title as='div'><strong>{product.name}</strong></Card.Title>
                 </Link>
-                <Card.Text>
+                <Card.Text as='div'>
                     <Rating value ={product.rating} text={`${product.numReviews} reviews` }  />
                 </Card.Text>
                 <Card.Text as='h3'>

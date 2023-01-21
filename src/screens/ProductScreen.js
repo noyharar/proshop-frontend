@@ -1,20 +1,16 @@
 import React, {useEffect, useState} from "react";
-import Link from 'react-router-dom';
 import {Row, Col, ListGroup, Image, Card, Button} from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
-
-import Rating from "../components/Rating";
-// import products from "../products";
 import {LinkContainer} from "react-router-bootstrap";
-import Container from "react-bootstrap/Container";
 import {useDispatch, useSelector} from 'react-redux'
 import {listProductDetails} from "../actions/productActions";
+import Rating from "../components/Rating";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
 
-const ProductScreen = ({history,match}) =>{
-    const [qty,setQty] = useState(0);
+    const ProductScreen = ({history,match}) =>{
+    const [qty,setQty] = useState(1);
     const dispatch = useDispatch();
     const productDetails = useSelector((state) => state.productDetails);
     const {loading, error, product} =  productDetails
@@ -29,9 +25,9 @@ const ProductScreen = ({history,match}) =>{
         // fetchProduct()
     },[dispatch,match])
 
-    const addToCartHandler =() => {
+    const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`)
-    }
+    };
     // const product = products.find((p) => p._id === match.params.id);
 
     return(

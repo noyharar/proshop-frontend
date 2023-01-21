@@ -12,8 +12,8 @@ import React from 'react'
 //     )
 // };
 
-const Message = ({ children }) => {
-    return <Alert variant='danger'>{children}</Alert>
+const Message = ({ variant, children }) => {
+    return <Alert variant={variant}>{children}</Alert>
 };
 
 Message.defaultProps = {
