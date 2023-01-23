@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad48444-1d16-4adf-a2bb-520697f065ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/cartActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/cartConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/cartReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/userActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/userConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/LoginScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/ProfileScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/RegisterScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/productActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/productActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/CartScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/CartScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ProductScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProductScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1673347252344" duration="3577000" />
       <workItem from="1673352518891" duration="36122000" />
       <workItem from="1673783574998" duration="51499000" />
-      <workItem from="1674317214888" duration="3398000" />
+      <workItem from="1674317214888" duration="22772000" />
     </task>
     <task id="LOCAL‎00001" summary="React init app">
       <created>1673351263976</created>
@@ -147,7 +144,13 @@
       <option name="presentableId" value="LOCAL‎00004" />
       <updated>1674035799838</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎00005" summary="add and remove from cart">
+      <created>1674321159134</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1674321159134</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +185,8 @@
     <MESSAGE value="React init app" />
     <MESSAGE value="implementation products's list and product's detail with redux" />
     <MESSAGE value="implementation products's list and product's detail with redux&#10;add to cart button and route to cart screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementation products's list and product's detail with redux&#10;add to cart button and route to cart screen" />
+    <MESSAGE value="add and remove from cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="add and remove from cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#ESLint" timestamp="1673874990653">
@@ -201,10 +205,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="51" y="90" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1673350593775" />
-    <state x="431" y="0" key="CommitChangelistDialog2" timestamp="1674035798994">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="287" y="0" key="CommitChangelistDialog2" timestamp="1674321157732">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1673908753439" />
+    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1674321157732" />
     <state x="431" y="0" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674035798994" />
     <state x="100" y="100" width="1080" height="480" key="DiffContextDialog" timestamp="1673351703166">
       <screen x="0" y="0" width="1280" height="680" />
@@ -215,25 +219,25 @@
     </state>
     <state x="421" y="97" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1673431243741" />
     <state x="632" y="148" key="FileChooserDialogImpl/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1673790758969" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1674166225070">
+    <state width="721" height="2" key="GridCell.Tab.0.bottom" timestamp="1674508403829">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1674166225070" />
+    <state width="721" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1674508403829" />
     <state width="1877" height="32" key="GridCell.Tab.0.bottom/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674038172372" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1674166225070">
+    <state width="721" height="2" key="GridCell.Tab.0.center" timestamp="1674508403829">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1674166225070" />
+    <state width="721" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1674508403829" />
     <state width="1877" height="32" key="GridCell.Tab.0.center/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674038172372" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1674166225070">
+    <state width="721" height="2" key="GridCell.Tab.0.left" timestamp="1674508403829">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1674166225070" />
+    <state width="721" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1674508403829" />
     <state width="1877" height="32" key="GridCell.Tab.0.left/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674038172372" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1674166225070">
+    <state width="721" height="2" key="GridCell.Tab.0.right" timestamp="1674508403829">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1674166225070" />
+    <state width="721" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1674508403829" />
     <state width="1877" height="32" key="GridCell.Tab.0.right/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674038172372" />
     <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1674055507083">
       <screen x="0" y="0" width="1280" height="680" />
@@ -291,10 +295,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="280" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1674054046554" />
-    <state x="350" y="96" key="Vcs.Push.Dialog.v2" timestamp="1674035836854">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2" timestamp="1674321763177">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1673908759326" />
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1674321763177" />
     <state x="350" y="96" key="Vcs.Push.Dialog.v2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674035836854" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1673996451318">
       <screen x="0" y="0" width="1280" height="680" />
@@ -308,10 +312,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1673355582197" />
-    <state x="351" y="82" width="694" height="578" key="find.popup" timestamp="1674320325635">
+    <state x="351" y="82" width="694" height="578" key="find.popup" timestamp="1674485064484">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="351" y="82" width="694" height="578" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1674320325635" />
+    <state x="351" y="82" width="694" height="578" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1674485064484" />
     <state x="527" y="125" width="1041" height="884" key="find.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674037877532" />
     <state x="91" y="67" key="new project wizard" timestamp="1673432640139">
       <screen x="0" y="0" width="1280" height="680" />
@@ -362,6 +366,19 @@
           <url>file://$PROJECT_DIR$/src/actions/cartActions.js</url>
           <line>7</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="NONE" type="javascript">
+          <url>file://$PROJECT_DIR$/src/reducers/productReducer.js</url>
+          <line>10</line>
+          <log-expression expression="    switch (action.type) {&#10;        case PRODUCT_LIST_REQUEST:&#10;            return {loading: true, products: [] };&#10;        case PRODUCT_LIST_SUCCESS:&#10;            return { loading: false, products: action.payload };&#10;        case PRODUCT_LIST_FAIL:&#10;            return { loading: false, error: action.payload};&#10;        default:&#10;            return state;&#10;    }&#10;};" language="JavaScript" />
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/actions/productActions.js</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
