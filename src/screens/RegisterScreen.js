@@ -12,12 +12,12 @@ const RegisterScreen = ({history, location}) =>{
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [confirmPassword,setConfirmCPassword] = useState('');
-    const [message,setMessage] = useState('');
+    const [message,setMessage] = useState(null);
 
     const dispatch = useDispatch();
     const userRegister = useSelector(state => state.userLogin)
     const {loading, error, userInfo} =  userRegister
-
+    //need to understand
     const redirect = location.search ? location.search.split('=')[1] : '/'
 
     useEffect( () => {

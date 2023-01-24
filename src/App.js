@@ -8,6 +8,7 @@ import {Container} from 'react-bootstrap'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Container>
                     <Route path='/login' component={LoginScreen} exact/>
                     <Route path='/register' component={RegisterScreen} exact/>
+                    <Route path='/profile' component={ProfileScreen} exact/>
                     <Route path='/product/:id' component={ProductScreen}/>
                     <Route path='/cart/:id?' component={CartScreen}/>
                     <Route path='/' component={HomeScreen} exact/>
