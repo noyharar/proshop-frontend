@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import {addToCart, removeFromCart} from "../actions/cartActions";
-import {LinkContainer} from "react-router-bootstrap";
 import {Button, Card, Col, Image, ListGroup, Row} from "react-bootstrap";
-import Loader from "../components/Loader";
 import Message from "../components/Message";
-import Rating from "../components/Rating";
 import Form from "react-bootstrap/Form";
 import {Link} from "react-router-dom";
 // import Loader from "../components/Loader";
@@ -31,9 +28,8 @@ const CartScreen =({match, location, history}) =>{
         console.log(productId)
         dispatch(removeFromCart(productId))
     };
-    const checkOutHandler=  () => {
-        // history.remove(`/cart/${productId}`)
-        console.log('checkout')
+    const checkOutHandler = () => {
+        history.push('/login?redirect=shipping')
     };
     return(
         <>
