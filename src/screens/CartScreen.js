@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import {addToCart, removeFromCart} from "../actions/cartActions";
 import {Button, Card, Col, Image, ListGroup, Row} from "react-bootstrap";
@@ -25,7 +25,6 @@ const CartScreen =({match, location, history}) =>{
 
 
     const removeFromCartHandler =  (productId) => {
-        console.log(productId)
         dispatch(removeFromCart(productId))
     };
     const checkOutHandler = () => {

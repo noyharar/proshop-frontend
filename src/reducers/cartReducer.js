@@ -25,17 +25,19 @@ export const cartReducer = (state = { cartItems: [], shippingAddress: {} }, acti
             return {
                 ...state,
                 // cartItems: state.cartItems.splice(existItemIndex, 1)}
-                cartItems: state.cartItems.filter(x => x.product !== action.payload.id)};
+                cartItems: state.cartItems.filter(x => x.product !== action.payload.id)
+            };
 
         case CART_SAVE_SHIPPING_ADDRESS:
             return {
                 ...state,
-                shippingAddress: action.payload};
+                shippingAddress: action.payload
+            };
         case CART_SAVE_PAYMENT_METHOD:
             return {
                 ...state,
-                shippingAddress: action.payload};
-
+                paymentMethod: action.payload
+            };
         default:
             return state;
     }
