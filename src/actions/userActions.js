@@ -12,7 +12,7 @@ import {
     USER_UPDATE_PROFILE_REQUEST,
     USER_UPDATE_PROFILE_SUCCESS,
     USER_UPDATE_PROFILE_FAIL,
-    USER_UPDATE_PROFILE_RESET
+    // USER_UPDATE_PROFILE_RESET
 } from '../constants/userConstants'
 import axios from 'axios';
 
@@ -90,9 +90,7 @@ export const getUserDetails = (id) => async (dispatch,getState) => {
                 Authorization: `Bearer ${userInfo.token}`
                 // Authorization: `Bearer ${localStorage.getItem(userInfo).token}`
             }};
-        console.log(`${userInfo.token}`)
         const { data } = await axios.get(`/users/${id}`, config);
-        console.log("data" + data)
         dispatch({
             type: USER_DETAILS_SUCCESS,
             payload: data
@@ -122,9 +120,7 @@ export const updateUserDetails = (user) => async (dispatch,getState) => {
                 Authorization: `Bearer ${userInfo.token}`
                 // Authorization: `Bearer ${localStorage.getItem(userInfo).token}`
             }};
-        console.log(`${userInfo.token}`)
         const { data } = await axios.put(`/users/profile`, user, config);
-        console.log("data" + data)
         dispatch({
             type: USER_UPDATE_PROFILE_SUCCESS,
             payload: data

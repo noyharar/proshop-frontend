@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from 'react-redux';
-import {Form, Button, Row, Col} from 'react-bootstrap';
-import Message from "../components/Message";
-import Loader from "../components/Loader";
-import {login} from "../actions/cartActions.js"
+import {Form, Button} from 'react-bootstrap';
 import FormContainer from "../components/FormContainer"
 import {saveShippingAddress} from '../actions/cartActions'
 import CheckoutSteps from '../components/CheckoutSteps'
