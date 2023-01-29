@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad48444-1d16-4adf-a2bb-520697f065ef" name="Default Changelist" comment="place order screen, reducer and actiom">
+      <change afterPath="$PROJECT_DIR$/src/screens/UserListScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/orderActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/orderActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/orderConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/orderConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/userConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/orderReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/orderReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/OrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/OrderScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/PlaceOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/PlaceOrderScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProfileScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +118,7 @@
       <workItem from="1673352518891" duration="36122000" />
       <workItem from="1673783574998" duration="51499000" />
       <workItem from="1674317214888" duration="51613000" />
-      <workItem from="1674688655699" duration="41696000" />
+      <workItem from="1674688655699" duration="48290000" />
     </task>
     <task id="LOCAL‎00001" summary="React init app">
       <created>1673351263976</created>
@@ -190,7 +186,13 @@
       <option name="presentableId" value="LOCAL‎00011" />
       <updated>1674743784380</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL‎00012" summary="order screen included paypal api and orders list on profile user">
+      <created>1674999088260</created>
+      <option name="number" value="LOCAL‎00012" />
+      <option name="presentableId" value="LOCAL‎00012" />
+      <updated>1674999088261</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +234,9 @@
     <MESSAGE value="place order screen" />
     <MESSAGE value="place order screen, reducer and actiom" />
     <MESSAGE value="Order screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order screen" />
+    <MESSAGE value="order screen and orders list on profile user" />
+    <MESSAGE value="order screen included paypal api and orders list on profile user" />
+    <option name="LAST_COMMIT_MESSAGE" value="order screen included paypal api and orders list on profile user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#ESLint" timestamp="1673874990653">
@@ -255,10 +259,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="396" y="249" width="488" height="385" key="#xdebugger.evaluate/0.0.1280.680@0.0.1280.680" timestamp="1674739146937" />
-    <state x="287" y="0" key="CommitChangelistDialog2" timestamp="1674999039057">
+    <state x="287" y="0" key="CommitChangelistDialog2" timestamp="1674999087006">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1674999039057" />
+    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1674999087006" />
     <state x="431" y="0" key="CommitChangelistDialog2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674035798994" />
     <state x="100" y="100" width="1080" height="480" key="DiffContextDialog" timestamp="1673351703166">
       <screen x="0" y="0" width="1280" height="680" />
@@ -345,10 +349,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="280" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1674054046554" />
-    <state x="233" y="63" key="Vcs.Push.Dialog.v2" timestamp="1674743786519">
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2" timestamp="1674999089911">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1674743786519" />
+    <state x="233" y="63" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1674999089911" />
     <state x="350" y="96" key="Vcs.Push.Dialog.v2/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674035836854" />
     <state x="93" y="93" width="1095" height="495" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1674911929865">
       <screen x="0" y="0" width="1280" height="680" />
@@ -366,10 +370,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1673355582197" />
-    <state x="493" y="72" width="568" height="578" key="find.popup" timestamp="1674998906070">
+    <state x="493" y="72" width="688" height="578" key="find.popup" timestamp="1675006329404">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="493" y="72" width="568" height="578" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1674998906070" />
+    <state x="493" y="72" width="688" height="578" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1675006329404" />
     <state x="527" y="125" width="1041" height="884" key="find.popup/1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1674037877532" />
     <state x="91" y="67" key="new project wizard" timestamp="1673432640139">
       <screen x="0" y="0" width="1280" height="680" />
