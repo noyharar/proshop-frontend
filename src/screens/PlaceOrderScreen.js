@@ -7,8 +7,8 @@ import Message from "../components/Message";
 import {createOrder} from "../actions/orderActions";
 
 
-const PlaceOrderScreen =(history) =>{
-    const cart = useSelector(state => state.cart)
+const PlaceOrderScreen = ({history}) =>{
+    const cart = useSelector(state => state.cart);
     // if (!cart.shippingAddress.address) {
     //     history.push('/shipping')
     // } else if (!cart.paymentMethod) {
@@ -20,9 +20,9 @@ const PlaceOrderScreen =(history) =>{
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2);
 
     const orderCreate = useSelector(state => state.orderCreate);
-    const {order, success,error} = orderCreate;
+    const {order, success, error} = orderCreate;
 
-    useEffect(() => {
+    useEffect( () => {
         if(success){
             history.push(`/order/${order._id}`)
         }
@@ -62,7 +62,7 @@ const PlaceOrderScreen =(history) =>{
                             <h2>Payment Method</h2>
                             <p>
                                 <strong>Method:</strong>
-                                {cart.paymentMethod.toString()}
+                                {cart.paymentMethod}
                             </p>
                         </ListGroup.Item>
                         <ListGroup.Item>
