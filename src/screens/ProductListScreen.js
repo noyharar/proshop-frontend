@@ -4,7 +4,8 @@ import {Button, Table, Row, Col} from 'react-bootstrap';
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import {LinkContainer} from 'react-router-bootstrap'
-import {listProducts, deleteProduct} from "../actions/productActions";
+import {listProducts, deleteProduct, createProduct} from "../actions/productActions";
+import {PRODUCT_CREATE_RESET} from "../constants/productConstants";
 
 const ProductListScreen = ({history, match}) =>{
 
@@ -19,13 +20,23 @@ const ProductListScreen = ({history, match}) =>{
     const productDelete = useSelector((state => state.productDelete));
     const {loading: loadingDelete, error: errorDelete, success: successDelete} = productDelete;
 
+    const productCreate = useSelector((state => state.productCreate));
+    const {loading: loadingCreate, error: errorCreate, success: successCreate, product: createdProduct} = productCreate
+
+    const productUpdate = useSelector((state => state.productUpdate));
+    const {loading: loadingUpdate, error: errorUpdate, success: successUpdate, product: updatedProduct} = productUpdate
+
     useEffect( () => {
-        if(userInfo && userInfo.isAdmin) {
-            dispatch(listProducts())
-        }else{
+        dispatch({type: PRODUCT_CREATE_RESET});
+        if(!userInfo.isAdmin) {
             history.push('/login')
         }
-    },[dispatch, history, userInfo,successDelete]);
+        if(successCreate){
+            history.push(`admin/product/${createdProduct._id}`)
+        }else{
+            dispatch(listProducts())
+        }
+    },[dispatch, history, userInfo,successDelete,successCreate,createdProduct]);
 
     function deleteHandler(id) {
         if(window.confirm('Are you sure you want to delete this user?')) {
@@ -34,7 +45,7 @@ const ProductListScreen = ({history, match}) =>{
     }
 
     function createProductHandler(){
-        console.log('new product')
+         dispatch(createProduct())
     };
     return (<>
             <Row className='align-items-center'>
@@ -47,6 +58,8 @@ const ProductListScreen = ({history, match}) =>{
                         </Button>
                 </Col>
             </Row>
+            {loadingCreate && <Loader/>}
+            {errorCreate && <Message variant='danger'>{errorCreate}</Message> }
             {loadingDelete && <Loader/>}
             {errorDelete && <Message variant='danger'>{errorDelete}</Message> }
             {loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> :
@@ -69,7 +82,7 @@ const ProductListScreen = ({history, match}) =>{
                             <td>{product._id}</td>
                             <td>{product.name}</td>
                             {/*<td>{product.description}</td>*/}
-                            <td>{product.price}</td>
+                            <td>${product.price}</td>
                             <td>{product.category}</td>
                             <td>{product.brand}</td>
                             <td>
