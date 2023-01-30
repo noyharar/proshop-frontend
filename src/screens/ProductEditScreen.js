@@ -8,6 +8,8 @@ import FormContainer from '../components/FormContainer'
 import {listProductDetails, updateProduct} from '../actions/productActions'
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 import axios from 'axios'
+
+
 const ProductEditScreen = ({ match, history }) => {
     const productId = match.params.id
 
@@ -30,7 +32,6 @@ const ProductEditScreen = ({ match, history }) => {
         loading: loadingUpdate,
         error: errorUpdate,
         success: successUpdate,
-        product: updatedProduct
     } = productUpdate;
 
     useEffect(() => {

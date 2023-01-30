@@ -23,9 +23,6 @@ const ProductListScreen = ({history, match}) =>{
     const productCreate = useSelector((state => state.productCreate));
     const {loading: loadingCreate, error: errorCreate, success: successCreate, product: createdProduct} = productCreate
 
-    const productUpdate = useSelector((state => state.productUpdate));
-    const {loading: loadingUpdate, error: errorUpdate, success: successUpdate, product: updatedProduct} = productUpdate
-
     useEffect( () => {
         dispatch({type: PRODUCT_CREATE_RESET});
         if(!userInfo.isAdmin) {

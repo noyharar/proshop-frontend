@@ -7,8 +7,8 @@ import {listProducts} from '../actions/productActions'
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 
-const HomeScreen = () => {
-    // const [products,setProducts] = useState([]);
+const HomeScreen = ({match}) => {
+    const keyword = match.params.keyword;
     const dispatch = useDispatch();
 
     const productList = useSelector((state) => state.productList);
@@ -16,13 +16,8 @@ const HomeScreen = () => {
 
 
     useEffect(()=>{
-        dispatch(listProducts())
-        // const fetchProducts = async () =>{
-        //     const {data} = await axios.get(`/products`)
-        //     setProducts(data);
-        // };
-        // fetchProducts()
-    },[dispatch]);
+        dispatch(listProducts(keyword))
+    },[dispatch,keyword]);
 
     return (
         <>
