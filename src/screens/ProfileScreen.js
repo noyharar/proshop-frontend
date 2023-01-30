@@ -8,7 +8,7 @@ import {USER_UPDATE_PROFILE_RESET} from '../constants/userConstants.js'
 import {listMyOrders} from "../actions/orderActions";
 import {LinkContainer} from 'react-router-bootstrap'
 
-const ProfileScreen = ({history, location}) =>{
+const ProfileScreen = ({history}) =>{
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');

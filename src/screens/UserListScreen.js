@@ -1,6 +1,6 @@
-    import React, {useState,useEffect} from "react";
+    import React, {useEffect} from "react";
     import {useDispatch, useSelector} from 'react-redux';
-    import {Form, Button, Row, Col, Table} from 'react-bootstrap';
+    import {Button, Table} from 'react-bootstrap';
     import Message from "../components/Message";
     import Loader from "../components/Loader";
     import { listUsers} from "../actions/userActions.js"
@@ -25,7 +25,7 @@
             }else{
                 history.push('/login')
             }
-        },[dispatch, history, successDelete]);
+        },[dispatch, history, successDelete, userInfo]);
 
         function deleteHandler(id) {
             if(window.confirm('Are you sure you want to delete this user?')) {
@@ -58,7 +58,7 @@
                                     <i className='fas fa-times' style={{color: 'red'}}></i>
                                 )}</td>
                                 <td>
-                                    <LinkContainer to={`/user/${user._id}`}>
+                                    <LinkContainer to={`/admin/user/${user._id}/edit`}>
                                         <Button varient='light' className='btn-sm'><i className='fas fa-edit'></i></Button>
                                     </LinkContainer>
                                     <Button varient='danger' className='btn-sm' onClick={() => deleteHandler(user._id)}><i className='fas fa-trash'></i></Button>
