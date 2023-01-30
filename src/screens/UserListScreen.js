@@ -34,7 +34,7 @@
         }
 
         return (<>
-                <h2>Users</h2>
+                <h1>Users</h1>
                 {loading ? <Loader/> : error ? <Message variant='danger'>{error}</Message> :
                     <Table striped hover responsive borders="true" className='table-sm'>
                         <thead>
