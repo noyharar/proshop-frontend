@@ -39,11 +39,12 @@ const HomeScreen = ({match}) => {
                 ) : (
                     <>
                         <Row>
-                            {products.map(product => (
+                            {Array.isArray(products)
+                                ? (products.map(product => (
                                 <Col key= {product._id} sm={12} md={6} lg={4}>
                                     <Product  product={product}/>
                                 </Col>
-                            ))}
+                            ))):null}
                         </Row>
                         <Paginate pages={pages} page={page} keyword={keyword ? keyword : ''} >
                         </Paginate>
