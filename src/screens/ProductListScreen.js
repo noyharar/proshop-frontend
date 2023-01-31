@@ -7,7 +7,6 @@ import {LinkContainer} from 'react-router-bootstrap'
 import {listProducts, deleteProduct, createProduct} from "../actions/productActions";
 import {PRODUCT_CREATE_RESET} from "../constants/productConstants";
 import Paginate from "../components/Paginate";
-import ProductsCarousel from "../components/ProductsCarousel";
 
 const ProductListScreen = ({history, match}) =>{
     const pageNumber = match.params.pageNumber || 1
